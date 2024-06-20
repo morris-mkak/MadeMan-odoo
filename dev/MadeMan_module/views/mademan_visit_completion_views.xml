@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_mademan_visit_completion_form" model="ir.ui.view">
+        <field name="name">mademan.visit.completion.form</field>
+        <field name="model">mademan.visit_completion</field>
+        <field name="arch" type="xml">
+            <form string="Visit Completion">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="visit_id"/>
+                        <field name="completed"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_mademan_visit_completion_tree" model="ir.ui.view">
+        <field name="name">mademan.visit.completion.tree</field>
+        <field name="model">mademan.visit_completion</field>
+        <field name="arch" type="xml">
+            <tree string="Visit Completions">
+                <field name="name"/>
+                <field name="visit_id"/>
+                <field name="completed"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_mademan_visit_completion" model="ir.actions.act_window">
+        <field name="name">Visit Completions</field>
+        <field name="res_model">mademan.visit_completion</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_mademan_visit_completion" name="Visit Completions" parent="menu_mademan_root" action="action_mademan_visit_completion"/>
+</odoo>

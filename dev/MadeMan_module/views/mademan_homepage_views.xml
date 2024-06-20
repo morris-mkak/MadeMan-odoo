@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_mademan_homepage_form" model="ir.ui.view">
+        <field name="name">mademan.homepage.form</field>
+        <field name="model">mademan.homepage</field>
+        <field name="arch" type="xml">
+            <form string="MadeMan Homepage">
+                <group>
+                    <field name="banner_title"/>
+                    <field name="banner_subtitle"/>
+                    <field name="info_text"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_mademan_homepage_tree" model="ir.ui.view">
+        <field name="name">mademan.homepage.tree</field>
+        <field name="model">mademan.homepage</field>
+        <field name="arch" type="xml">
+            <tree string="MadeMan Homepage">
+                <field name="banner_title"/>
+                <field name="banner_subtitle"/>
+                <field name="info_text"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_mademan_homepage" model="ir.actions.act_window">
+        <field name="name">Homepage</field>
+        <field name="res_model">mademan.homepage</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_mademan_homepage" name="Homepage" parent="menu_mademan_root" action="action_mademan_homepage"/>
+</odoo>

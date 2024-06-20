@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_mademan_service_tree" model="ir.ui.view">
+        <field name="name">mademan.service.tree</field>
+        <field name="model">mademan.service</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_mademan_service_form" model="ir.ui.view">
+        <field name="name">mademan.service.form</field>
+        <field name="model">mademan.service</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="price"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_mademan_services" name="Services" parent="menu_mademan_root" action="action_mademan_services"/>
+    <record id="action_mademan_services" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">mademan.service</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

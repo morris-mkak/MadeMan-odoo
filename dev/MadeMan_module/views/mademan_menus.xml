@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_mademan_root" name="MadeMan" sequence="10"/>
+    <menuitem id="menu_mademan_dashboard" name="Dashboard" parent="menu_mademan_root" action="action_mademan_dashboard" sequence="10"/>
+    <menuitem id="menu_mademan_barber" name="Barbers" parent="menu_mademan_root" action="action_mademan_barber" sequence="20"/>
+    <menuitem id="menu_mademan_customer" name="Customers" parent="menu_mademan_root" action="action_mademan_customer" sequence="30"/>
+    <menuitem id="menu_mademan_services" name="Services" parent="menu_mademan_root" action="action_mademan_services" sequence="40"/>
+    <menuitem id="menu_mademan_appointment" name="Appointments" parent="menu_mademan_root" action="action_mademan_appointment" sequence="50"/>
+</odoo>

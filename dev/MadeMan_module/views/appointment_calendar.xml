@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_mademan_appointment_calendar" model="ir.ui.view">
+        <field name="name">mademan.appointment.calendar</field>
+        <field name="model">mademan.appointment</field>
+        <field name="arch" type="xml">
+            <calendar string="Appointments" date_start="date">
+                <field name="customer_id"/>
+                <field name="barber_id"/>
+                <field name="service_id"/>
+            </calendar>
+        </field>
+    </record>
+
+    <menuitem id="menu_mademan_appointment_calendar" name="Appointment Calendar" parent="menu_mademan_appointments" action="action_mademan_appointment_calendar"/>
+    <record id="action_mademan_appointment_calendar" model="ir.actions.act_window">
+        <field name="name">Appointment Calendar</field>
+        <field name="res_model">mademan.appointment</field>
+        <field name="view_mode">calendar,tree,form</field>
+    </record>
+</odoo>

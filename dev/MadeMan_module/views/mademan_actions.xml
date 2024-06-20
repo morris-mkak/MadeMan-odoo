@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_mademan_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">mademan.dashboard</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mademan_barber" model="ir.actions.act_window">
+        <field name="name">Barbers</field>
+        <field name="res_model">mademan.barber</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mademan_customer" model="ir.actions.act_window">
+        <field name="name">Customers</field>
+        <field name="res_model">mademan.customer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mademan_services" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">mademan.service</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mademan_appointment" model="ir.actions.act_window">
+        <field name="name">Appointments</field>
+        <field name="res_model">mademan.appointment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mademan_visit" model="ir.actions.act_window">
+        <field name="name">Visits</field>
+        <field name="res_model">mademan.visit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+</odoo>

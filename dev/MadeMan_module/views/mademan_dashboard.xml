@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="" ?>
+<odoo>
+    <record>
+        <field name="name">mademan.dashboard.form</field>
+        <field name="model">mademan.dashboard</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard">
+                <group>
+                    <field name="name"/>
+                </group>
+                <div class="oe_button_box" name="button_box">
+                    <button class="oe_stat_button" type="action" name="action_mademan_customer" string="Customers"/>
+                    <button class="oe_stat_button" type="action" name="action_mademan_services" string="Services"/>
+                    <button class="oe_stat_button" type="action" name="action_mademan_visits" string="Visits"/>
+                    <button class="oe_stat_button" type="action" name="action_mademan_charge"
+                            string="Charge for Service"/>
+                    <button class="oe_stat_button" type="action" name="action_mademan_payment_confirmation"
+                            string="Confirm Payment"/>
+                    <button class="oe_stat_button" type="action" name="action_mademan_visit_completion"
+                            string="Complete Visit"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_mademan_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">mademan.dashboard</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="menu_mademan_dashboard" name="Dashboard" parent="menu_mademan_root" action="action_mademan_dashboard"/>
+</odoo>

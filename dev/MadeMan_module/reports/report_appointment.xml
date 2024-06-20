@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <report
+        id="report_mademan_appointment"
+        model="mademan.appointment"
+        string="Appointment Report"
+        report_type="qweb-pdf"
+        name="mademan_management.report_appointment"
+        file="mademan_management.report_appointment"
+    />
+    <template id="report_appointment">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <h2>Appointment Report</h2>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Customer</th>
+                            <th>Barber</th>
+                            <th>Service</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="docs" t-as="appointment">
+                            <td><span t-field="appointment.date"/></td>
+                            <td><span t-field="appointment.customer_id.name"/></td>
+                            <td><span t-field="appointment.barber_id.name"/></td>
+                            <td><span t-field="appointment.service_id.name"/></td>
+                            <td><span t-field="appointment.state"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mademan_barber,mademan.barber,model_mademan_barber,,1,1,1,1
+access_mademan_customer,mademan.customer,model_mademan_customer,,1,1,1,1
+access_mademan_service,mademan.service,model_mademan_service,,1,1,1,1
+access_mademan_appointment,mademan.appointment,model_mademan_appointment,,1,1,1,1
+access_mademan_dashboard,mademan.dashboard,model_mademan_dashboard,,1,1,1,1

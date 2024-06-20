@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="homepage" name="MadeMan Homepage">
+        <t t-call="website.layout">
+            <div class="homepage">
+                <div class="banner">
+                    <h1>Welcome to MadeMan Barbershop</h1>
+                    <p>Your one-stop solution for grooming and styling</p>
+                </div>
+                <div class="info">
+                    <p>Book an appointment with our professional barbers</p>
+                    <p>Experience the best grooming services</p>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

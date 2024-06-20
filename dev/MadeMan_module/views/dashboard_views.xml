@@ -1,0 +1,54 @@
+<odoo>
+    <record id="action_mademan_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">mademan.dashboard</field>
+        <field name="view_mode">form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first dashboard.
+            </p>
+        </field>
+    </record>
+
+    <record id="view_mademan_dashboard_form" model="ir.ui.view">
+        <field name="name">mademan.dashboard.form</field>
+        <field name="model">mademan.dashboard</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard">
+                <sheet>
+                    <group>
+                        <field name="total_appointments"/>
+                        <field name="total_customers"/>
+                        <field name="total_barbers"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_mademan_root" name="MadeMan Module" sequence="10"/>
+
+    <menuitem id="menu_mademan_dashboard" name="Dashboard" parent="menu_mademan_root" action="action_mademan_dashboard"/>
+
+    <record id="action_mademan_customer" model="ir.actions.act_window">
+        <field name="name">Customers</field>
+        <field name="res_model">mademan.customer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_state': 'draft'}</field>
+    </record>
+    <menuitem id="menu_mademan_customer" name="Customers" parent="menu_mademan_root" action="action_mademan_customer"/>
+
+    <record id="action_mademan_services" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">mademan.service</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_mademan_services" name="Services" parent="menu_mademan_root" action="action_mademan_services"/>
+
+    <record id="action_mademan_visit" model="ir.actions.act_window">
+        <field name="name">Visits</field>
+        <field name="res_model">mademan.visit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_mademan_visits" name="Visits" parent="menu_mademan_root" action="action_mademan_visit"/>
+</odoo>
