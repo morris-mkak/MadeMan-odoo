@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="payment_acquirer_mpesa" model="payment.acquirer">
+        <field name="name">Mpesa</field>
+        <field name="provider">mpesa</field>
+        <field name="state">enabled</field>
+        <field name="mpesa_api_key">7rwvA1Bo2P2yQ9uStAC4OsWIo2ZrGpbJsDvymGvoSNnEOMio</field>
+        <field name="mpesa_api_secret">LLkjgjdmthX8dAUzEsMxNtwjAeoq9N6MJzdFJr9AYZAmgwkaG6GRtAAFAsAkuDiN</field>
+        <field name="mpesa_shortcode">N/A</field>
+        <field name="mpesa_passkey">your_passkey</field>
+    </record>
+</odoo>

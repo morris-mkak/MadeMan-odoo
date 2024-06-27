@@ -4,7 +4,7 @@
     'author': "Moh Doe",
     'category': 'Uncategorized',
     'version': '0.1',
-    'depends': ['base','sale','contacts','website'],
+    'depends': ['base','contacts','website'],
     'demo': [
         'demo/demo.xml',
     ],
